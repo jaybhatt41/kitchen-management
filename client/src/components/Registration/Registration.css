@@ -1,0 +1,156 @@
+/* General Styling */
+body {
+    font-family: "Roboto Slab", serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( #472a05, #d1a17d); /* Matching gradient */
+}
+
+/* Registration Container */
+.registration-container {
+    width: 32%;
+    max-height: 90vh;
+    background: #f9f4ef; /* Off-white for contrast */
+    backdrop-filter: blur(5px); /* Light glass effect */
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    border-radius: 12px;
+    padding: 2rem;
+    border: 2px solid #8b6e5a; /* Matching border */
+    box-sizing: border-box;
+    overflow-y: auto;
+    animation: fadeIn 1s ease-in-out; /* Smooth fade-in effect */
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Title */
+.registration-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #6e4f3b; /* Rich brown */
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Registration Form */
+.registration-form {
+    display: flex;
+    flex-direction: column;
+     /* Improved spacing between fields */
+}
+
+/* Input Fields */
+.inputfield {
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #8b6e5a; /* Medium brown */
+    border-radius: 8px;
+    background-color: #fef1e4; /* Light beige */
+    color: #4e342e; /* Dark brown text */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 600;
+}
+
+.inputfield::placeholder {
+    color: #a67c52; /* Golden brown placeholder */
+}
+
+.inputfield:focus {
+    border-color: #d1a17d; /* Soft golden brown */
+    box-shadow: 0 0 8px rgba(139, 110, 90, 0.6); /* Subtle focus glow */
+    outline: none;
+}
+
+/* Submit Button */
+.submit-button {
+    color: #fef1e4; /* Light cream text */
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #472a05;
+    color: #472a05;;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15); /* Soft shadow */
+}
+
+.submit-button:hover {
+   
+    transform: scale(1.05); /* Slight hover scale */
+     /* Off-white text */
+}
+
+/* Success and Error Messages */
+.success {
+    color: #6e4f3b; /* Rich brown for success messages */
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.error {
+    color: #fa4545; /* Burnt red for errors */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Login Link */
+.login-link {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.login-link span {
+    color: #6e4f3b; /* Rich brown text */
+}
+
+.login-link a {
+    background-color: #4e342e; /* Dark brown */
+    color: #fef1e4; /* Light cream text */
+    margin-left: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    background-color: #d1a17d; /* Light brown */
+    color: #4e342e; /* Dark text */
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .registration-container {
+        width: 80%; /* Adjusted for smaller screens */
+        padding: 1.5rem;
+    }
+
+    .registration-title {
+        font-size: 1.5rem;
+    }
+
+    .inputfield,
+    .submit-button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}

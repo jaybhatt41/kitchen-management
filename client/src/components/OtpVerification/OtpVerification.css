@@ -1,0 +1,130 @@
+body{
+    font-family: "Roboto Slab", serif;
+    margin: 0;
+    padding: 0;
+}
+.main{
+ 
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    background: linear-gradient( #472a05, #d1a17d);
+}
+.otp-verification-container {
+    width: 32%;
+    max-height: 90vh;
+    background: #f9f4ef;
+    backdrop-filter: blur(3px);
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin: 9rem auto;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+    animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.otp-title{
+    font-size: 2rem;
+    margin-top: 5px;
+    margin-bottom: 1.5rem;
+    color: #6e4f3b;
+    text-align: center;
+}
+.otp-sent-email{
+    font-size: 1.2rem;
+    margin-top: 5px;
+    margin-bottom: 1.5rem;
+    color: #693207;
+    text-align: center;
+}
+.otp-form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+/* Input Fields */
+.inputfield {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #8b6e5a; /* Medium brown */
+    border-radius: 8px;
+    background-color: #fef1e4; /* Light beige */
+    color: #4e342e; /* Dark brown text */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 600;
+}
+
+.inputfield::placeholder {
+    color: #a67c52;
+}
+
+.inputfield:focus {
+    border-color: #d1a17d; /* Soft golden brown */
+    box-shadow: 0 0 8px rgba(139, 110, 90, 0.6); /* Subtle focus glow */
+    outline: none;
+    color: #4E342E;
+}
+
+/* Button */
+.submit-button {
+    border: 0;
+    outline: none;
+    background-color: #F2AE66;
+    color: #4E342E;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 20px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #754E1A;
+    color: #FAFFC5;
+    transform: scale(1.05);
+}
+
+/* Success and Error Messages */
+.success {
+    color: #d9db52;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.error {
+    color: #fa4545fc;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .otp-verification-container {
+        width: 50%;
+        margin: 8rem auto;
+    }
+
+    .registration-title {
+        font-size: 1.5rem;
+    }
+
+    .inputfield,
+    .submit-button {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+}
