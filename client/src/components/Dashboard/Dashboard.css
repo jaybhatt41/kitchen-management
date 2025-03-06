@@ -33,15 +33,17 @@
 }
 
 .btn-logout {
-  margin: 0 1rem;
-  padding: 0 1rem;
+  margin: 0.1rem;
   background-color: #f9f9f9;
   color: #6e4f3b;
-  padding: 0.8rem;
+  max-width: 7rem;
+  max-height: 4rem;
+  padding: 0.2rem;
   border-radius: 5px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  font-size: 1rem;
 }
 
 .btn-logout:hover {
@@ -63,7 +65,7 @@
   padding-top: 0.5rem;
   position: sticky;
   top: 0;
-  height: 100vh;
+  min-height: 100vh;
   transition: width 0.3s;
 }
 
@@ -83,7 +85,7 @@
   color: #fff;
   font-size: 1.5rem;
   font-weight: bold;
-  padding: 1rem;
+  padding: 0.8rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -97,30 +99,35 @@
   position: absolute;
   top: 0;
   left: 50%; /* Submenu appears to the right of the section */
-  width: 20rem; /* Adjust width as per your design */
+  width: 15rem; /* Adjust width as per your design */
   list-style-type: none;
-  padding: 0;
+  padding: 0.8;
   background-color: #5b3921;
   transition: all 0.5s ease;
   max-height: 0; /* Ensure submenu is hidden by default */
   opacity: 0;
   overflow: hidden;
-  z-index: 10;
+  z-index: 1000;
   border-radius: 5px; /* Optional: Adds a rounded corner for a modern look */
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow for depth */
 }
 
 /* Submenu display on hover */
 .sidebar-section:hover .submenu {
-  max-height: 300px; /* Allow submenu to expand */
+  max-height: 500px; /* Allow submenu to expand */
   opacity: 1;
   left: 50%;
-  top: 100%; /* Align submenu to appear fully */
+  top: 100%;
+  z-index: 1000; /* Align submenu to appear fully */
+}
+select{
+  position: relative;
+  z-index: 1;
 }
 
 /* Style submenu items */
 .submenu li a {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
   padding: 0.5rem 1rem;
   display: block;

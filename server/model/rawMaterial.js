@@ -1,22 +1,28 @@
-const mongoose = require("mongoose");
-
-const rawMaterialSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true,
-        trim: true,
-        unique:true
+const mongoose=require("mongoose")
+const rawMaterialSchema=mongoose.Schema({
+    name:{
+        type:String,
+        required:true
     },
-    unit: {
-        type: String,
-        required: true,
-        enum: ["kg", "gram", "mg", "ton", "lb", "oz", "liter", "ml", "piece", "dozen", "pair", "set", "unit"]
+    quantity:{
+        type:Number,
+        required:true
     },
-    userId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User", 
-        required: true
+    unit:{
+        type:String,
+        required:true
+    },
+    cost:{
+        type:Number,
+        required:true
+    },
+    createAt:{
+        type:Date,
+        default:Date.now()
+    },
+    userId:{
+        type:mongoose.Schema.Types.ObjectId,
+        required:true
     }
-}, { timestamps: true });
-
-module.exports = mongoose.model("RawMaterial", rawMaterialSchema);
+})
+module.exports=mongoose.model("RawMaterial",rawMaterialSchema)

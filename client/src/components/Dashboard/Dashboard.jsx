@@ -23,13 +23,43 @@ const Dashboard = () => {
         <div className="sidebar">
           <ul>
             {/* Overview link */}
-            <li>
-              <NavLink
-                to="overview"
-                className={({ isActive }) => (isActive ? "active-link" : "")}
-              >
-                Overview
-              </NavLink>
+            <li className="sidebar-section">
+              <div className="section-title">Master</div>
+              <ul className="submenu">
+                <li>
+                  <NavLink
+                    to="add-raw-material-master"
+                    className={({ isActive }) => (isActive ? "active-link" : "")}
+                  >
+                    Add Raw Materials Master
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="add-product-master"
+                    className={({ isActive }) => (isActive ? "active-link" : "")}
+                  >
+                   Add Product Master
+                  </NavLink>
+                </li>
+               
+                <li>
+                  <NavLink
+                    to="all-raw-material-master"
+                    className={({ isActive }) => (isActive ? "active-link" : "")}
+                  >
+                   All Raw Material Master
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="all-product-master"
+                    className={({ isActive }) => (isActive ? "active-link" : "")}
+                  >
+                   All Product Master
+                  </NavLink>
+                </li>
+              </ul>
             </li>
 
             {/* Raw Material Management section with hover effect to show submenu */}
@@ -56,26 +86,13 @@ const Dashboard = () => {
             </li>
 
             {/* Purchase Management */}
-            <li className="sidebar-section">
-              <div className="section-title">Purchase Management</div>
-              <ul className="submenu">
-                <li>
-                  <NavLink
-                    to="purchases"
-                    className={({ isActive }) => (isActive ? "active-link" : "")}
-                  >
-                    View Purchases
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="add-purchase"
-                    className={({ isActive }) => (isActive ? "active-link" : "")}
-                  >
-                    Create Purchase
-                  </NavLink>
-                </li>
-              </ul>
+            <li>
+              <NavLink
+                to="purchases"
+                className={({ isActive }) => (isActive ? "active-link" : "")}
+              >
+                Purchase
+              </NavLink>
             </li>
 
             {/* Other Sections */}
@@ -102,26 +119,13 @@ const Dashboard = () => {
             </li>
 
             {/* Distribution */}
-            <li className="sidebar-section">
-              <div className="section-title">Distribution</div>
-              <ul className="submenu">
-                <li>
-                  <NavLink
-                    to="distributions"
-                    className={({ isActive }) => (isActive ? "active-link" : "")}
-                  >
-                    View Distribution
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="add-distribution"
-                    className={({ isActive }) => (isActive ? "active-link" : "")}
-                  >
-                    Add Distribution
-                  </NavLink>
-                </li>
-              </ul>
+            <li>
+              <NavLink
+                to="add-distribution"
+                className={({ isActive }) => (isActive ? "active-link" : "")}
+              >
+                Add Distribution
+              </NavLink>
             </li>
 
             {/* Bills */}

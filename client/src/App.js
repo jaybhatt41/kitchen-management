@@ -10,13 +10,15 @@ import AddDistribution from "./components/Distributions/AddDistribution"
 import BillManagement from "./components/Bills/BillManagement"
 import CreditInvoice from "./components/Invoices/CreditInvoice"
 import DebitInvoice from "./components/Invoices/DebitInvoice"
-import Overview from  "./components/Overview/Overview"
 import AddProduct from "./components/Products/AddProduct"
+import AddRawMaterialMaster from './components/Master/AddRawMaterialMaster';
+import AddProductMaster from './components/Master/AddProductMaster';
 import ProductList from "./components/Products/ProductList"
-import AddPurchase from "./components/Purchases/AddPurchase"
 import PurchaseList from "./components/Purchases/PurchaseList"
 import AddRawMaterial from "./components/RawMaterial/AddRawMaterial"
 import RawMaterialList from "./components/RawMaterial/RawMaterialList"
+import AllRawMaterialMaster from './components/Master/AllRawMaterialMaster';
+import AllProductMaster from './components/Master/AllProductMaster';
 
 
 function App() {
@@ -35,9 +37,16 @@ function App() {
                   <Dashboard/>
                 </ProtectedRoute>
               } >
-            <Route path='overview' element={<Overview/>}/>
+            <Route path='add-raw-material-master' element={<AddRawMaterialMaster/>}/>
+            <Route path='add-product-master' element={<AddProductMaster/>}/>
+            <Route path='all-raw-material-master' element={<AllRawMaterialMaster/>}/>
+            <Route path='all-product-master' element={<AllProductMaster/>}/>
+            
+
+            
             <Route path='raw-material' element={<RawMaterialList/>}/>
             <Route path='add-raw-material' element={<AddRawMaterial/>}/>
+
             <Route path='product' element={<ProductList/>}/>
             <Route path='add-product' element={<AddProduct/>}/>
 
@@ -45,7 +54,6 @@ function App() {
             <Route path='add-distribution' element={<AddDistribution/>}/>
 
             <Route path='purchases' element={<PurchaseList/>}/>
-            <Route path='add-purchase' element={<AddPurchase/>}/>
 
 
 

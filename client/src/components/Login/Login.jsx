@@ -26,7 +26,7 @@ const Login = () => {
             const response=await axios.post("http://localhost:5000/api/user/login",formData)
             setSuccess(response.data.msg)
             localStorage.setItem("token",response.data.token)
-            navigate("/dashboard/overview")
+            navigate("/dashboard/all-raw-material-master")
         } catch (error) {
             if (error.response && error.response.data) {
                 setError(error.response.data.msg);
